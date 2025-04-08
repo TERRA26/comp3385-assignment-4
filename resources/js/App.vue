@@ -1,25 +1,27 @@
-<script setup>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-</script>
-
 <template>
     <Header />
-    <div class="container my-5">
-        <RouterView />
-    </div>
-    <Footer />
+    <main>
+        <router-view />
+    </main>
+    <footer class="py-3 bg-light text-center mt-auto">
+        <div class="container">
+            <p class="text-muted">Copyright © 2024, COMP3385 Web Dev Superstars ✨</p>
+        </div>
+    </footer>
 </template>
 
+<script setup>
+import Header from './components/Header.vue';
+</script>
+
 <style>
-html {
-    position: relative;
-    min-height: 100%;
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+main {
+    flex: 1;
 }
 </style>
